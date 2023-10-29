@@ -1,0 +1,37 @@
+//Data that has given to Collection zenclass
+
+{
+    "contents":"Normalization, select queries, joins DB model design Intro to MongoDB & installation of Mongodb",
+    "pre-read":"https://dev.mysql.com/doc/",
+    "day":2,
+    "topic":"MySQL",
+    "task":"Design DB model for Guvi Zen class",
+}
+
+//queries
+use guvizenclass_db
+
+guvizenclass_db> db.zenclass.insertOne({
+...     "contents":"Normalization, select queries, joins DB model design Intro to MongoDB & installation of Mongodb",
+...     "pre-read":"https://dev.mysql.com/doc/",
+...     "day":2,
+...     "topic":"MySQL",
+...     "task":"Design DB model for Guvi Zen class",
+... })
+{
+  acknowledged: true,
+  insertedId: ObjectId("653c0ab4cfa83e4ae532752b")
+}
+
+guvizenclass_db> db.zenclass.find()
+[
+  {
+    _id: ObjectId("653c0ab4cfa83e4ae532752b"),
+    contents: 'Normalization, select queries, joins DB model design Intro to MongoDB & installation of Mongodb',
+    'pre-read': 'https://dev.mysql.com/doc/',
+    day: 2,
+    topic: 'MySQL',
+    task: 'Design DB model for Guvi Zen class'
+  }
+]
+
